@@ -59,6 +59,23 @@
             color: lime;
             font-family: 'Consolas', 'Courier New', monospace;
         }
+                /* Style for the "BUY $SCAN" button */
+        .buy-button {
+            position: absolute;
+            bottom: 20px; /* Place at the bottom */
+            left: 20px;
+            background-color: black;
+            color: lime;
+            padding: 10px 20px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            cursor: pointer;
+            text-decoration: none;
+            z-index: 2;
+        }
+        .buy-button:hover {
+            background-color: lime;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -101,7 +118,10 @@
             <!-- Lighting and other components can be added here -->
         </a-entity>
     </a-scene>
-
+    
+    <!-- "BUY $SCAN" button -->
+    <a class="buy-button" href="https://your-link-here.com" target="_blank">BUY $SCAN</a>
+    
     <!-- Text container -->
     <div class="text-container">
         <div class="terminal text-content">
