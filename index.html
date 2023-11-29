@@ -8,7 +8,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <!-- Include A-Frame Extras for WASD and Look Controls -->
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.2/dist/aframe-extras.min.js"></script>
-    <!-- Loader Style -->
+    <!-- Loader and Terminal Style -->
     <style>
         .loader {
             position: fixed;
@@ -23,6 +23,22 @@
             font-size: 2em;
             color: black;
         }
+        .terminal {
+            background-color: black;
+            color: lime;
+            font-family: 'Consolas', 'Courier New', monospace;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        /* Adjust the A-Frame scene's dimensions and position */
+        a-scene {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%; /* Adjust the height as needed */
+            z-index: -1; /* Move the scene behind other content */
+        }
     </style>
 </head>
 <body>
@@ -34,13 +50,11 @@
     <!-- A-Frame Scene -->
     <a-scene>
         <!-- Asset Management System -->
-        <a-assets>
-            <!-- satscan Model .obj -->
-            <a-asset-item id="satscan-obj" src="satscan.obj"></a-asset-item>
-            <!-- Scene Model .gltf and .bin -->
-            <a-asset-item id="scene-gltf" src="scene.gltf"></a-asset-item>
-            <a-asset-item id="scene-bin" src="scene.bin"></a-asset-item>
-        </a-assets>
+        <!-- satscan Model .obj -->
+        <a-asset-item id="satscan-obj" src="satscan.obj"></a-asset-item>
+        <!-- Scene Model .gltf and .bin -->
+        <a-asset-item id="scene-gltf" src="scene.gltf"></a-asset-item>
+        <a-asset-item id="scene-bin" src="scene.bin"></a-asset-item>
 
         <!-- Set Initial Camera Position and Rotation with WASD and Look Controls -->
         <a-entity id="camera-entity" camera look-controls wasd-controls="fly: true" position="-49.82751513237537 55.43407569478495 -108.63230560612553"></a-entity>
@@ -67,6 +81,14 @@
             <!-- Lighting and other components can be added here -->
         </a-entity>
     </a-scene>
+
+    <!-- Text in Terminal Style -->
+    <div class="terminal">
+        Rare sat hunting is a new phenomenon introduced by Ordinal theory on Bitcoin. As stated nicely by Xverse (a BTC wallet),<br><br>
+        "Not all satoshis are created equal. Some satoshis are rarer than others, creating a market for rare satoshis. They contain special attributes that make them unique.<br><br>
+        For example, the first satoshi mined after a Bitcoin halving event is considered rarer than other satoshis in that same block. These satoshis are classified as “epic sats” by the Rodarmor Rarity Index, which is used to determine a sat’s special attributes."<br><br>
+        So why does this matter and why does it require a lot of capital? Rare sats are extracted by locating rare sats within hot wallets of exchanges, and depositing and withdrawing bitcoin on that exchange to 'sift' through the bitcoin. These rare sats are becoming increasing popular and in high demand and early calculations show that even at just hunting with 50 BTC, users could generate up to 60% APY. I have developed a fully functioning rare sat hunter which can complete 50 cycles per day, but lack the capital for it to be fully efficient and generate high yield.
+    </div>
 
     <!-- Hide Loader Script -->
     <script>
