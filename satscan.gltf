@@ -1,0 +1,414 @@
+{
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 2528,
+            "max": [
+                0.454833984375,
+                0.115234375,
+                0.02220916748046875
+            ],
+            "min": [
+                -0.454833984375,
+                0.0,
+                -0.02220916748046875
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 2528,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 2528,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5123,
+            "count": 3582,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5123,
+            "count": 3,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 5,
+            "componentType": 5123,
+            "count": 2472,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 6,
+            "componentType": 5123,
+            "count": 3,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 7,
+            "componentType": 5123,
+            "count": 3582,
+            "type": "SCALAR"
+        }
+    ],
+    "asset": {
+        "generator": "Adobe Creative Cloud",
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 30336
+        },
+        {
+            "buffer": 0,
+            "byteLength": 20224,
+            "byteOffset": 30336
+        },
+        {
+            "buffer": 0,
+            "byteLength": 30336,
+            "byteOffset": 50560
+        },
+        {
+            "buffer": 0,
+            "byteLength": 7164,
+            "byteOffset": 80896
+        },
+        {
+            "buffer": 0,
+            "byteLength": 6,
+            "byteOffset": 88060
+        },
+        {
+            "buffer": 0,
+            "byteLength": 4944,
+            "byteOffset": 88066
+        },
+        {
+            "buffer": 0,
+            "byteLength": 6,
+            "byteOffset": 93010
+        },
+        {
+            "buffer": 0,
+            "byteLength": 7164,
+            "byteOffset": 93016
+        },
+        {
+            "buffer": 0,
+            "byteLength": 114759,
+            "byteOffset": 100180
+        },
+        {
+            "buffer": 0,
+            "byteLength": 81889,
+            "byteOffset": 214939
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 296828,
+            "uri": "satscan.bin"
+        }
+    ],
+    "extensionsRequired": [
+        "KHR_texture_transform",
+        "KHR_texture_transform",
+        "KHR_texture_transform",
+        "KHR_texture_transform"
+    ],
+    "extensionsUsed": [
+        "KHR_texture_transform",
+        "KHR_texture_transform",
+        "KHR_texture_transform",
+        "KHR_texture_transform"
+    ],
+    "images": [
+        {
+            "bufferView": 8,
+            "mimeType": "image/jpeg",
+            "name": "SatScan.JPG"
+        },
+        {
+            "bufferView": 9,
+            "mimeType": "image/jpeg",
+            "name": "SatScan Extrusion Material - Default Texture.JPG"
+        }
+    ],
+    "materials": [
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": true,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "SatScan Front Inflation Material",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "extensions": {
+                        "KHR_texture_transform": {
+                            "offset": [
+                                0.05664287135004997,
+                                0.4443150758743286
+                            ],
+                            "rotation": 0.0,
+                            "scale": [
+                                0.8883219361305237,
+                                0.11266255378723145
+                            ]
+                        }
+                    },
+                    "index": 0
+                },
+                "metallicFactor": 0.07999999821186066,
+                "roughnessFactor": 0.3333333432674408
+            }
+        },
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": true,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "SatScan Front Bevel Material",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "extensions": {
+                        "KHR_texture_transform": {
+                            "offset": [
+                                0.05664287135004997,
+                                0.4443150758743286
+                            ],
+                            "rotation": 0.0,
+                            "scale": [
+                                0.8883219361305237,
+                                0.11266255378723145
+                            ]
+                        }
+                    },
+                    "index": 0
+                },
+                "metallicFactor": 0.07999999821186066,
+                "roughnessFactor": 0.3333333432674408
+            }
+        },
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": true,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "SatScan Extrusion Material",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "index": 1
+                },
+                "metallicFactor": 0.07999999821186066,
+                "roughnessFactor": 0.3333333432674408
+            }
+        },
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": true,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "SatScan Back Bevel Material",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "extensions": {
+                        "KHR_texture_transform": {
+                            "offset": [
+                                0.05664287135004997,
+                                0.4443150758743286
+                            ],
+                            "rotation": 0.0,
+                            "scale": [
+                                0.8883219361305237,
+                                0.11266255378723145
+                            ]
+                        }
+                    },
+                    "index": 0
+                },
+                "metallicFactor": 0.07999999821186066,
+                "roughnessFactor": 0.3333333432674408
+            }
+        },
+        {
+            "alphaMode": "OPAQUE",
+            "doubleSided": true,
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "name": "SatScan Back Inflation Material",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "baseColorTexture": {
+                    "extensions": {
+                        "KHR_texture_transform": {
+                            "offset": [
+                                0.05664287135004997,
+                                0.4443150758743286
+                            ],
+                            "rotation": 0.0,
+                            "scale": [
+                                0.8883219361305237,
+                                0.11266255378723145
+                            ]
+                        }
+                    },
+                    "index": 0
+                },
+                "metallicFactor": 0.07999999821186066,
+                "roughnessFactor": 0.3333333432674408
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "SatScan",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 1
+                    },
+                    "indices": 3,
+                    "material": 0,
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 1
+                    },
+                    "indices": 4,
+                    "material": 1,
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 1
+                    },
+                    "indices": 5,
+                    "material": 2,
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 1
+                    },
+                    "indices": 6,
+                    "material": 3,
+                    "mode": 4
+                },
+                {
+                    "attributes": {
+                        "NORMAL": 2,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 1
+                    },
+                    "indices": 7,
+                    "material": 4,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -512.8082885742188,
+                -512.6083374023438,
+                57.6832275390625,
+                1.0
+            ],
+            "mesh": 0,
+            "name": "SatScan"
+        }
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "textures": [
+        {
+            "source": 0
+        },
+        {
+            "source": 1
+        }
+    ]
+}
