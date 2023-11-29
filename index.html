@@ -78,11 +78,45 @@
             top: 20px; /* Place next to the "BUY $SCAN" button */
             left: 160px;
         }
+        .connect-wallet-button {
+            top: 20px; /* Place at the top right corner */
+            right: 20px;
+        }
         .button:hover {
             background-color: lime;
             color: black;
         }
-    </style>
+        /* Popup style */
+        .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        text-align: center;
+        display: none; /* Hidden by default */
+        z-index: 3;
+    }
+    .popup-title {
+        color: white; /* Set the font color to white */
+        font-size: 20px; /* Adjust the font size as needed */
+        margin-bottom: 20px; /* Add some space below the title */
+    }
+    .popup-button {
+        background-color: black;
+        color: lime;
+        padding: 10px 20px;
+        font-family: 'Consolas', 'Courier New', monospace;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 10px;
+    }
+    .popup-button:hover {
+        background-color: lime;
+        color: black;
+    }
+</style>
 </head>
 <body>
     <!-- Loader -->
@@ -95,6 +129,18 @@
 
     <!-- "CLAIM BTC" button -->
     <a class="button claim-button" href="https://your-btc-claim-link.com" target="_blank">CLAIM BTC</a>
+
+    <!-- "Connect Wallet" button -->
+    <a class="button connect-wallet-button" href="#" onclick="showPopup()">Connect Wallet</a>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div>
+        <h2 class="popup-title">Choose a Wallet:</h2>
+        <button class="popup-button" onclick="connectXverseWallet()">Xverse</button>
+        <button class="popup-button" onclick="connectUnisatWallet()">Unisat</button>
+    </div>
+</div>
 
     <!-- A-Frame Scene -->
     <a-scene>
@@ -143,6 +189,33 @@
             Deposit your Bitcoin and earn rare sat hunting yield. I have access to a fully functioning automated rare sat hunter which can complete 50 cycles per day, but the bot only becomes more efficient with increased capital, as fees quickly add up on Bitcoin.
         </div>
     </div>
+
+    <!-- JavaScript for the popup -->
+    <script>
+        function showPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        }
+
+        function connectXverseWallet() {
+            // Add logic to connect Xverse wallet here
+            alert('Connecting Xverse Wallet...');
+            // Close the popup
+            closePopup();
+        }
+
+        function connectUnisatWallet() {
+            // Add logic to connect Unisat wallet here
+            alert('Connecting Unisat Wallet...');
+            // Close the popup
+            closePopup();
+        }
+
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
 
     <!-- Hide Loader Script -->
     <script>
