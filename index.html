@@ -59,10 +59,10 @@
             color: lime;
             font-family: 'Consolas', 'Courier New', monospace;
         }
-                /* Style for the "BUY $SCAN" button */
+        /* Style for the "BUY $SCAN" button */
         .buy-button {
             position: absolute;
-            bottom: 20px; /* Place at the bottom */
+            top: 20px; /* Place at the top left corner */
             left: 20px;
             background-color: black;
             color: lime;
@@ -83,6 +83,9 @@
     <div id="loader" class="loader">
         Loading...
     </div>
+
+    <!-- "BUY $SCAN" button (Top Left) -->
+    <a class="buy-button" href="https://your-link-here.com" target="_blank">BUY $SCAN</a>
 
     <!-- A-Frame Scene -->
     <a-scene>
@@ -118,9 +121,6 @@
             <!-- Lighting and other components can be added here -->
         </a-entity>
     </a-scene>
-    
-    <!-- "BUY $SCAN" button -->
-    <a class="buy-button" href="https://your-link-here.com" target="_blank">BUY $SCAN</a>
     
     <!-- Text container -->
     <div class="text-container">
