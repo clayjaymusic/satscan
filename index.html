@@ -10,6 +10,10 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.1.2/dist/aframe-extras.min.js"></script>
     <!-- Loader and Terminal Style -->
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
         .loader {
             position: fixed;
             top: 0;
@@ -36,8 +40,22 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 80%; /* Adjust the height as needed */
+            height: 100%;
             z-index: -1; /* Move the scene behind other content */
+        }
+        /* Text container style */
+        .text-container {
+            position: absolute;
+            bottom: 0; /* Place the text container at the bottom */
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text */
+            overflow-y: auto; /* Enable vertical scrolling */
+            padding: 20px;
+        }
+        .text-content {
+            color: lime;
+            font-family: 'Consolas', 'Courier New', monospace;
         }
     </style>
 </head>
@@ -82,12 +100,14 @@
         </a-entity>
     </a-scene>
 
-    <!-- Text in Terminal Style -->
-    <div class="terminal">
-        Rare sat hunting is a new phenomenon introduced by Ordinal theory on Bitcoin. As stated nicely by Xverse (a BTC wallet),<br><br>
-        "Not all satoshis are created equal. Some satoshis are rarer than others, creating a market for rare satoshis. They contain special attributes that make them unique.<br><br>
-        For example, the first satoshi mined after a Bitcoin halving event is considered rarer than other satoshis in that same block. These satoshis are classified as “epic sats” by the Rodarmor Rarity Index, which is used to determine a sat’s special attributes."<br><br>
-        So why does this matter and why does it require a lot of capital? Rare sats are extracted by locating rare sats within hot wallets of exchanges, and depositing and withdrawing bitcoin on that exchange to 'sift' through the bitcoin. These rare sats are becoming increasing popular and in high demand and early calculations show that even at just hunting with 50 BTC, users could generate up to 60% APY. I have developed a fully functioning rare sat hunter which can complete 50 cycles per day, but lack the capital for it to be fully efficient and generate high yield.
+    <!-- Text container -->
+    <div class="text-container">
+        <div class="terminal text-content">
+            Rare sat hunting is a new phenomenon introduced by Ordinal theory on Bitcoin. As stated nicely by Xverse (a BTC wallet),<br><br>
+            "Not all satoshis are created equal. Some satoshis are rarer than others, creating a market for rare satoshis. They contain special attributes that make them unique.<br><br>
+            For example, the first satoshi mined after a Bitcoin halving event is considered rarer than other satoshis in that same block. These satoshis are classified as “epic sats” by the Rodarmor Rarity Index, which is used to determine a sat’s special attributes."<br><br>
+            So why does this matter and why does it require a lot of capital? Rare sats are extracted by locating rare sats within hot wallets of exchanges, and depositing and withdrawing bitcoin on that exchange to 'sift' through the bitcoin. These rare sats are becoming increasing popular and in high demand and early calculations show that even at just hunting with 50 BTC, users could generate up to 60% APY. I have access to a fully functioning automated rare sat hunter which can complete 50 cycles per day, but lack the capital for it to be fully efficient and generate high yield.
+        </div>
     </div>
 
     <!-- Hide Loader Script -->
