@@ -15,6 +15,7 @@
         body {
             margin: 0;
             padding: 0;
+            position: relative; /* Add this to make body a reference for positioning */
         }
         .loader {
             position: fixed;
@@ -88,35 +89,51 @@
         }
         /* Popup style */
         .popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 0, 0, 0.7);
-        padding: 20px;
-        text-align: center;
-        display: none; /* Hidden by default */
-        z-index: 3;
-    }
-    .popup-title {
-        color: white; /* Set the font color to white */
-        font-size: 20px; /* Adjust the font size as needed */
-        margin-bottom: 20px; /* Add some space below the title */
-    }
-    .popup-button {
-        background-color: black;
-        color: lime;
-        padding: 10px 20px;
-        font-family: 'Consolas', 'Courier New', monospace;
-        cursor: pointer;
-        text-decoration: none;
-        margin: 10px;
-    }
-    .popup-button:hover {
-        background-color: lime;
-        color: black;
-    }
-</style>
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+            display: none; /* Hidden by default */
+            z-index: 3;
+        }
+        .popup-title {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .popup-button {
+            background-color: black;
+            color: lime;
+            padding: 10px 20px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .popup-button:hover {
+            background-color: lime;
+            color: black;
+        }
+        /* Media query for mobile screens */
+        @media (max-width: 768px) {
+            .text-container {
+                position: fixed;
+                bottom: 0; /* Place the text container at the bottom on mobile */
+                left: 0;
+                width: 100%;
+                max-height: 100%; /* Set max height to 100% of the screen height */
+                background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for text */
+                overflow-y: auto; /* Enable vertical scrolling */
+                padding: 20px;
+            }
+            .button {
+                display: none; /* Hide buttons on mobile */
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Loader -->
@@ -133,17 +150,19 @@
     <!-- "Connect Wallet" button -->
     <a class="button connect-wallet-button" href="#" onclick="showPopup()">Connect Wallet</a>
 
-<!-- Popup -->
-<div id="popup" class="popup">
-    <div>
-        <h2 class="popup-title">Choose a Wallet:</h2>
-        <button class="popup-button" onclick="connectXverseWallet()">Xverse</button>
-        <button class="popup-button" onclick="connectUnisatWallet()">Unisat</button>
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div>
+            <h2 class="popup-title">Choose a Wallet:</h2>
+            <button class="popup-button" onclick="connectXverseWallet()">Xverse</button>
+            <button class="popup-button" onclick="connectUnisatWallet()">Unisat</button>
+        </div>
     </div>
-</div>
 
-    <!-- A-Frame Scene -->
+    <!-- A-Frame Scene with orange sky -->
     <a-scene>
+        <a-sky color="orange"></a-sky> <!-- Orange sky added here -->
+
         <!-- Asset Management System -->
         <!-- satscan Model .obj -->
         <a-asset-item id="satscan-obj" src="satscan.obj"></a-asset-item>
@@ -186,7 +205,7 @@
             So why does this matter and why does it require a lot of capital? 
             Rare sats are extracted by locating rare sats within hot wallets of exchanges, and depositing and withdrawing bitcoin on that exchange to 'sift' through the bitcoin. These rare sats are becoming increasingly popular and in high demand and early calculations show that even at just hunting with 50 BTC, users could generate up to 60% APY.<br><br>
             How does it work?
-            Deposit your Bitcoin and earn rare sat hunting yield. The fully automated rare sat hunter can complete 50 cycles per day, but the bot only becomes more efficient with increased BTC volume, as fees quickly add up on Bitcoin.
+            Deposit your Bitcoin and earn rare sat hunting yield. The automated rare sat hunter can complete 50 cycles per day, but is only efficient when hunting with very high volume, as fees quickly add up on Bitcoin.
         </div>
     </div>
 
